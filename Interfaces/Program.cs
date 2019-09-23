@@ -24,7 +24,7 @@ namespace Interfaces
             double priceDay = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             
             CarRental carRental = new CarRental(start, finish, new Vehicle(model));
-            RentalService rentalService = new RentalService(priceHour, priceDay);
+            RentalService rentalService = new RentalService(priceHour, priceDay,new BrazilTaxService());
 
             rentalService.ProcessInvoice(carRental);
 
